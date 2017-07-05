@@ -22,6 +22,7 @@ do
 		# Pridedu SPF irasa i faila
 		#echo "	IN	TXT	\"v=spf1 mx -all\"" >> $fileDir/$f
 		sed -i "/NS\tsizifas.gmc.lt/a \\\tIN\tTXT\t\"v=spf1 mx -all\"" $fileDir/$f
+		sed -i "/IN      NS      sizifas.gmc.lt./a \\\tIN\tTXT\t\"v=spf1 mx -all\"" $fileDir/$f
 	else
 		echo -e "\e[92mLSPF radau\e[0m"
 		
@@ -30,3 +31,4 @@ do
 #		sed -i '{/tIN\tTXT\t"v=spf1 mx -all"/d}' $fileDir/$f
 	fi
 done
+
